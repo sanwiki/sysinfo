@@ -24,6 +24,7 @@ def get_system_stats():
     bytes_received = network.bytes_recv
     
     # Print statistics
+    print("===========================================")
     print("CPU Usage: {}%".format(cpu_percent))
     print("CPU Count: {}".format(cpu_count))
     print("CPU Frequency: {} MHz".format(cpu_freq.current if cpu_freq is not None else "N/A"))
