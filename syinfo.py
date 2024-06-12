@@ -36,6 +36,6 @@ def get_system_stats():
     print("Disk Free: {:.2f} GB".format(disk_free / (1024 ** 3)))
     print("Bytes Sent: {:.2f} MB".format(bytes_sent / (1024 ** 2)))
     print("Bytes Received: {:.2f} MB".format(bytes_received / (1024 ** 2)))
-
+    print("===========================================")
 # Call the function to get and print system stats
 get_system_stats()
