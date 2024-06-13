@@ -1,11 +1,12 @@
 import psutil
+import sys
 
 def get_system_stats():
     # CPU statistics
     cpu_percent = psutil.cpu_percent(interval=1)
     cpu_count = psutil.cpu_count()
     cpu_freq = psutil.cpu_freq()
-    
+
     # Memory statistics
     memory = psutil.virtual_memory()
     memory_total = memory.total
@@ -38,4 +39,22 @@ def get_system_stats():
     print("Bytes Received: {:.2f} MB".format(bytes_received / (1024 ** 2)))
     print("===========================================")
 # Call the function to get and print system stats
+
+def re():
+    in1 = input("Do you want to use it again?")
+
+    if in1 == "yes" or "y":
+        print("ok")
+        get_system_stats()
+        re()
+
+    elif in1 == "no" or "n":
+        print("ok")
+        sys.exit("Byeee!")
+
+    else:
+        print("Sorry please type yes or no!")
+        re()
+
 get_system_stats()
+re()
